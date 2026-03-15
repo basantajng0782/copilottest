@@ -1,6 +1,14 @@
 def reverse_string(s):
     return s[::-1]
 
+    def find_missing_number(nums):
+        n = len(nums) + 1
+        expected_sum = n * (n + 1) // 2
+        actual_sum = sum(nums)
+        return expected_sum - actual_sum
+
+        nums = list(map(int, input("Enter numbers separated by spaces (with one missing from 1 to n): ").split()))
+        print("Missing number:", find_missing_number(nums))
 if __name__ == "__main__":
     input_str = input("Enter a string: ")
     print("Reversed string:", reverse_string(input_str))
